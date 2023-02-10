@@ -1,7 +1,7 @@
 <?php
 $recipes = [
     ['title' => 'Mousse au chocolat', 'description' => 'test mousse Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'image' => '1-chocolate-au-mousse.jpg'],
-    ['title' => 'Gratin dauphinois', 'description' => 'test gratin Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'image' => '2-gratin-dauphinois.jpg'],
+    ['title' => 'Gratin dauphinois', 'description' => 'test gratin Lorem dolor si dolor sit amet consectetur adipisicing elit. t amet consectetur adipisicing elit. dolor sit amet consectetur adipisicing elit.', 'image' => '2-gratin-dauphinois.jpg'],
     ['title' => 'Salade de chèvre', 'description' => 'test salade Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'image' => '3-salade.jpg'],
 ];
 
@@ -63,10 +63,10 @@ $recipes = [
                         <div class="card">
                             <img src="uploads/recipes/<?= $recipe['image'] ?>" class="card-img-top" alt="<?= $recipe['title']; ?>">
 
-                            <div class="card-body">
+                            <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><?= $recipe['title'] ?></h5>
                                 <p class="card-text"><?= $recipe['description'] ?></p>
-                                <a href="#" class="btn btn-primary">Voir la recette</a>
+                                <a href="#" class="mt-auto btn btn-primary">Voir la recette</a>
                             </div>
                         </div>
                     </div>
