@@ -66,7 +66,9 @@ $recipes = [
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><?= $recipe['title'] ?></h5>
                                 <p class="card-text"><?= $recipe['description'] ?></p>
-                                <a href="#" class="mt-auto btn btn-primary">Voir la recette</a>
+                                <div class="mt-auto">
+                                    <a href="#" class="btn btn-primary">Voir la recette</a>
+                                </div>
                             </div>
                         </div>
                     </div>
