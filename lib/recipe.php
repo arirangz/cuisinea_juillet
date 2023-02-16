@@ -1,5 +1,23 @@
 <?php
 
+/*
+    Ajout d'une nouvelle recette dans la bdd
+*/
+
+function saveRecipe(PDO $pdo, string $title, string $description, string $ingredients, string $instructions, int $category_id, string $image = null) {
+    $query = $pdo->prepare("INSERT INTO recipes (title, description, ingredients, instructions, category_id, image) "
+                    ."VALUES(:title, :description, :ingredients, :instructions, :category_id, :image)");
+    
+    $query->bindParam(':title', $title, PDO::PARAM_STR);
+    $query->bindParam(':description', $description, PDO::PARAM_STR);
+    $query->bindParam(':ingredients', $ingredients, PDO::PARAM_STR);
+    $query->bindParam(':instructions', $instructions, PDO::PARAM_STR);
+    $query->bindParam(':category_id', $category_id, PDO::PARAM_INT);
+    $query->bindParam(':image', $image, PDO::PARAM_STR);
+
+    return $query->execute();
+
+}
 
 /*
     Récupération d'une recette à partir de son id
